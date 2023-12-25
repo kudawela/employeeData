@@ -1,16 +1,17 @@
 package com.springboot.crud.entity;
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.Entity; // javax.
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table; //javax
 
 @Entity
-@Table(name = "Employee")
+@Table(name = "employee")
 public class Employee {
 	
 	@Id
-	@Generated(value = { "mm" })
+	@GeneratedValue
 	private int id;
 	private String name;
 	private int age;
