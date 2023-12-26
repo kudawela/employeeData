@@ -11,9 +11,11 @@ public class EmployeeService {
 	@Autowired
 	private EmployeeRepository employeeRepository;
 
+	// insert employee
 	public Employee save(Employee emp) {
 		return employeeRepository.save(emp);	
 	}
+	
 	public EmployeeRepository getEmployeeRepository() {
 		return employeeRepository;
 	}
@@ -22,4 +24,9 @@ public class EmployeeService {
 		this.employeeRepository = employeeRepository;
 	}
 	
+	// get employee
+	public Employee getEmployee(int id) {
+		return employeeRepository.findById(id).get();
+	}
+
 }
