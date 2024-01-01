@@ -29,4 +29,13 @@ public class EmployeeService {
 		return employeeRepository.findById(id).get();
 	}
 
+	// update employee
+	public Employee update(Employee employee)
+	{
+		Employee emp = employeeRepository.findById(employee.getId()).get();
+		emp.setName(employee.getName());
+		emp.setAge(employee.getAge());
+		
+		return employeeRepository.save(emp);
+	}
 }
