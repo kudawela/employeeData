@@ -38,4 +38,10 @@ public class EmployeeService {
 		
 		return employeeRepository.save(emp);
 	}
+	
+	// delete the employee
+	public String delete(int id) {
+		employeeRepository.deleteById(id);
+		return "Entity deleted " + id;
+	}
 }

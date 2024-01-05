@@ -1,6 +1,7 @@
 package com.springboot.crud.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -33,6 +34,13 @@ public class EmployeeController {
 	{
 		return employeeService.update(employee);
 	}
+	
+	@DeleteMapping(path = "/{id}")
+	public String deleteEmployee(@PathVariable int id)
+	{
+		return employeeService.delete(id);
+	}
+	
 	public EmployeeService getEmployeeservice() {
 		return employeeService;
 	}
