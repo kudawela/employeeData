@@ -33,9 +33,15 @@ public class EmployeeService {
 	public Employee update(Employee employee)
 	{
 		Employee emp = employeeRepository.findById(employee.getId()).get();
-		emp.setName(employee.getName());
-		emp.setAge(employee.getAge());
-		
+		emp.setSalary(employee.getSalary());
+		emp.setExperience(employee.getExperience());
+		emp.setCompany(employee.getCompany());
+		emp.setEducation(employee.getEducation());
+		emp.setGender(employee.getGender());
+		emp.setDob(employee.getDob());
+		emp.setEmail(employee.getEmail());
+		emp.setLastName(employee.getLastName());
+		emp.setFirstName(employee.getFirstName());
 		return employeeRepository.save(emp);
 	}
 	
