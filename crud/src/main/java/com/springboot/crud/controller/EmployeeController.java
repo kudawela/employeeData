@@ -16,7 +16,7 @@ import com.springboot.crud.service.EmployeeService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("/employee")
+@RequestMapping("/employees")
 public class EmployeeController {
 	@Autowired
 	private EmployeeService employeeService;
