@@ -11,7 +11,7 @@ import jakarta.persistence.Table; //javax
 public class Employee {
 	
 	@Id
-	//@GeneratedValue(strategy = GenerationType.IDENTITY
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String firstName;
 	private String lastName;
